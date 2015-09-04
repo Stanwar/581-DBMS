@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+
+
+<link rel="stylesheet" type="text/css" href="leaflet/leaflet.css" />
+    <link rel="stylesheet" href="leaflet-routing-machine.css" />
+<script type="text/javascript" src="leaflet/leaflet.js"></script>
+<script type="text/javascript" src="leaflet/leafletembed.js"></script>
+<script src="leaflet-routing-machine.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script>
+
+</script>
+
+<style type="text/css">
+#map { height: 650px; }
+</style>
+
+</head>
+
+<body>
+
+
+
+<form name="form1">
+<p> Enter the date and time:</p>
+<input type = "text" name="dayfield" id="dayfield">
+<br>
+<p> Enter the congestion level :</p>
+<input type = "text" name="congfield" id="congfield">
+<br>
+<br>
+<button type="button" id="calculate" onclick="myCalFunction()">Calculate</button> 
+<button  id="create" onclick="myGetFunction()">Get Result</button> 
+
+
+
+<select name="destination" onchange="find_dest()">
+ <option value="">Select a Destination:</option>
+  <option value="7004">W. end of Jefferson</option>
+  <option value="7006">North Point and Larkin</option>
+  <option value="7036">Beach and Stockton</option>
+  <option value="7017">Midway 2700 block of Leavenworth</option>
+  <option value="7021">North Point and Jones</option>
+  <option value="7023">Jefferson and Taylor</option>
+  <option value="7030">Bay and Mason</option>
+  <option value="7031">Vandewater and Mason</option>
+  <option value="7034">North Point and Powell</option>
+  <option value="7039">Beach and Grant</option>
+
+
+  </select>
+
+ 
+</form>
+
+<br>
+<p id="demo">Selected Item is:</p>
+<br>
+<div id="txtHint"><b>Fetch the node information</b></div>
+ <div id="map"></div>
+
+<script type="text/javascript">
+   function myGetFunction() {
+    var ftt=finaltime+finalwalkingtime;
+var data = finaltime+"\n"+finalwalkingtime  + "\n" +ftt  ;
+var url = 'data:text/json;charset=utf8,' + encodeURIComponent(data);
+window.open(url, '_blank');
+window.focus();                                        }
+</script>
+
+</body>
+</html> 

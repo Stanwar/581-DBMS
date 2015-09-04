@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+
+
+<link rel="stylesheet" type="text/css" href="leaflet/leaflet.css" />
+    <link rel="stylesheet" href="leaflet-routing-machine.css" />
+<script type="text/javascript" src="leaflet/leaflet.js"></script>
+<script type="text/javascript" src="leaflet/leafletembed.js"></script>
+<script src="leaflet-routing-machine.js"></script>
+<script>
+
+</script>
+
+<style type="text/css">
+#map { height: 650px; }
+</style>
+
+</head>
+
+<body>
+
+<p id="demo">Selected Item is:</p>
+<p> Enter the timestamp:</p>
+<form name="form1">
+
+<input type = "text" name="text" id="datefield">
+<p> Enter the congestion Level: </p>
+<input type = "text" name="congestion" id="congestion">
+<br>
+<br>
+<select name="destination" onchange="find_dest()">
+  <option value="">Select a Destination:</option>
+  <option value="7001">Beach and Polk</option>
+  <option value="7002">North Point and Polk</option>
+  <option value="7003">Bay and Polk</option>
+  <option value="7004">W. end of Jefferson</option>
+  <option value="7005">Beach and Larkin</option>
+  <option value="7006">North Point and Larkin</option>
+  <option value="7007">Bay and Larkin</option>
+  <option value="7008">N. end of Hyde</option>
+  <option value="7009">Jefferson and Hyde</option>
+  <option value="7010">Beach and Hyde</option>
+  <option value="7011">North Point and Hyde</option>
+  <option value="7012">Bay and Hyde</option>
+  <option value="7013">N. end of Leavenworth</option>
+  <option value="7014">Jefferson and Leavenworth</option>
+  <option value="7015">Beach and Leavenworth</option>
+  <option value="7016">North Point and Leavenworth</option>
+  <option value="7017">Midway 2700 block of Leavenworth</option>
+  <option value="7018">Bay and Leavenworth</option>
+  <option value="7019">Jefferson and Jones</option>
+  <option value="7020">Beach and Jones</option>
+  <option value="7021">North Point and Jones</option>
+  <option value="7022">Bay and Jones</option>
+  <option value="7023">Jefferson and Taylor</option>
+  <option value="7024">Beach and Taylor</option>
+  <option value="7025">North Point and Taylor</option>
+  <option value="7026">Bay and Taylor</option>
+  <option value="7027">Jefferson and Mason</option>
+  <option value="7028">Beach and Mason</option>
+  <option value="7029">North Point and Mason</option>
+  <option value="7030">Bay and Mason</option>
+  <option value="7031">Vandewater and Mason</option>
+  <option value="7032">Jefferson and Powell</option>
+  <option value="7033">Beach and Powell</option>
+  <option value="7034">North Point and Powell</option>
+  <option value="7035">Bay and Powell</option>
+  <option value="7036">Beach and Stockton</option>
+  <option value="7037">North Point and Stockton</option>
+  <option value="7038">Bay and Stockton</option>
+  <option value="7039">Beach and Grant</option>
+  <option value="7040">North Point and Grant</option>
+
+
+  </select>
+
+ 
+</form>
+
+<br>
+<button onclick = "fetch_route_summary()">Update Route Information</button>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<p id ="disp"></p>
+<hr>
+<div id="txtHint"><b>See the route below:</b></div>
+ <div id="map"></div>
+
+ <script type="text/javascript">
+//initmap();
+
+</script>
+
+
+</body>
+</html> 
